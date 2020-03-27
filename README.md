@@ -5,8 +5,15 @@
 [![GitHub watchers](https://img.shields.io/github/watchers/hbulpf/InterviewNotes.svg?label=Watchers)](https://github.com/hbulpf/InterviewNotes/watchers)
 [![GitHub forks](https://img.shields.io/github/forks/hbulpf/InterviewNotes.svg?label=Forks)](https://github.com/hbulpf/InterviewNotes/fork)
 
-#### 介绍
-校招笔记
+
+校招基础知识总结与整理，助你成为 offer 收割机。
+
+## 基础
+
+## 算法
+1. [剑指offer]()
+
+
 
 
 ----------------------------------------
