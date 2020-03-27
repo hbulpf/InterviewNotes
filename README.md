@@ -25,4 +25,8 @@
 
 **友情贡献**
 
+<<<<<<< .mine
 @[**RunAtWorld**](http://www.github.com/RunAtWorld)  &nbsp;@[**wiggins**](https://github.com/GroundWu) &nbsp;  @[**Clock966**](http://www.github.com/Clock966) 
+=======
+@[**RunAtWorld**](http://www.github.com/RunAtWorld)  &nbsp;@[**wiggins**](https://github.com/GroundWu)   &nbsp;@[**Clock966**](https://github.com/Clock966) 
+>>>>>>> .theirs
