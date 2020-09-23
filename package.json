@@ -1,0 +1,16 @@
+{
+  "name": "InterviewNotes",
+  "version": "1.0.0",
+  "description": "面试笔记",
+  "main": "index.js",
+  "repository": "https://gitee.com/sifangcloud/InterviewNotes",
+  "author": "RunAtWorld",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.4"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}

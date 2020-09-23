@@ -1,4 +1,4 @@
-# 校招笔记
+# 面试笔记
 
 [![知识共享协议（CC协议）](https://img.shields.io/badge/License-Creative%20Commons-DC3D24.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
 [![GitHub stars](https://img.shields.io/github/stars/hbulpf/InterviewNotes.svg?label=Stars)](https://github.com/hbulpf/InterviewNotes)
@@ -13,8 +13,7 @@
 ## 算法
 
 1. 剑指offer [C++版本](https://github.com/hbulpf/CodingInterviewChinese2) [Java版本](https://github.com/hbulpf/point-to-offer-edition2)
-1. 常见排序算法复杂性分析: https://blog.csdn.net/yushiyi6453/article/details/76407640
-
+1. [常见排序算法复杂性分析](https://blog.csdn.net/yushiyi6453/article/details/76407640)
 
 
 ----------------------------------------

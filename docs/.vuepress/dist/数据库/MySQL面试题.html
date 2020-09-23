@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MySQL基础 | InterviewNotes</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="面试笔记">
+    <link rel="preload" href="/assets/css/0.styles.7950d16d.css" as="style"><link rel="preload" href="/assets/js/app.60168104.js" as="script"><link rel="preload" href="/assets/js/2.9ef5e12b.js" as="script"><link rel="preload" href="/assets/js/26.fe7b47f6.js" as="script"><link rel="prefetch" href="/assets/js/10.cbb282fc.js"><link rel="prefetch" href="/assets/js/11.cdc27a66.js"><link rel="prefetch" href="/assets/js/12.ab8e82c7.js"><link rel="prefetch" href="/assets/js/13.53b1283e.js"><link rel="prefetch" href="/assets/js/14.8c3425fa.js"><link rel="prefetch" href="/assets/js/15.2c1b20e2.js"><link rel="prefetch" href="/assets/js/16.d2bc9b08.js"><link rel="prefetch" href="/assets/js/17.af04b44e.js"><link rel="prefetch" href="/assets/js/18.36d8b51f.js"><link rel="prefetch" href="/assets/js/19.839c51be.js"><link rel="prefetch" href="/assets/js/20.8703ba87.js"><link rel="prefetch" href="/assets/js/21.ec8a48db.js"><link rel="prefetch" href="/assets/js/22.02fa06cd.js"><link rel="prefetch" href="/assets/js/23.8003129d.js"><link rel="prefetch" href="/assets/js/24.49627a6e.js"><link rel="prefetch" href="/assets/js/25.4bc883a8.js"><link rel="prefetch" href="/assets/js/27.1da201b3.js"><link rel="prefetch" href="/assets/js/28.efdeafac.js"><link rel="prefetch" href="/assets/js/29.790c40a3.js"><link rel="prefetch" href="/assets/js/3.d8a31682.js"><link rel="prefetch" href="/assets/js/30.26da2d35.js"><link rel="prefetch" href="/assets/js/31.8569e720.js"><link rel="prefetch" href="/assets/js/32.394a43c4.js"><link rel="prefetch" href="/assets/js/33.059e39bc.js"><link rel="prefetch" href="/assets/js/34.52c2a972.js"><link rel="prefetch" href="/assets/js/35.3219d2fd.js"><link rel="prefetch" href="/assets/js/36.73f2576d.js"><link rel="prefetch" href="/assets/js/37.78b40203.js"><link rel="prefetch" href="/assets/js/38.5b08bd75.js"><link rel="prefetch" href="/assets/js/39.710d1f05.js"><link rel="prefetch" href="/assets/js/4.5ed19beb.js"><link rel="prefetch" href="/assets/js/40.8638dba5.js"><link rel="prefetch" href="/assets/js/41.532c5b33.js"><link rel="prefetch" href="/assets/js/42.b7b9d2c2.js"><link rel="prefetch" href="/assets/js/43.4ead7e96.js"><link rel="prefetch" href="/assets/js/44.b9192d5d.js"><link rel="prefetch" href="/assets/js/45.fc295a45.js"><link rel="prefetch" href="/assets/js/5.feba2b90.js"><link rel="prefetch" href="/assets/js/6.fa972741.js"><link rel="prefetch" href="/assets/js/7.29e8ee4b.js"><link rel="prefetch" href="/assets/js/8.2f455837.js"><link rel="prefetch" href="/assets/js/9.dcabcf46.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7950d16d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">InterviewNotes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/hadoop/" class="nav-link">
+  hadoop
+</a></div><div class="nav-item"><a href="/Java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/数据库/" class="nav-link">
+  数据库
+</a></div><div class="nav-item"><a href="/操作系统/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/Android.html" class="nav-link">
+  Android
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/language/chinese/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link">
+  Japanese
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/hadoop/" class="nav-link">
+  hadoop
+</a></div><div class="nav-item"><a href="/Java/" class="nav-link">
+  Java
+</a></div><div class="nav-item"><a href="/数据库/" class="nav-link">
+  数据库
+</a></div><div class="nav-item"><a href="/操作系统/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/Android.html" class="nav-link">
+  Android
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/language/chinese/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link">
+  Japanese
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/%E6%95%B0%E6%8D%AE%E5%BA%93/" aria-current="page" class="sidebar-link">数据库</a></li><li><a href="/数据库/MySQL面试题.html" class="active sidebar-link">MySQL基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/数据库/MySQL面试题.html#mysql主从复制" class="sidebar-link">MYSQL主从复制</a></li></ul></li><li><a href="/数据库/Redis面试题.html" class="sidebar-link">redis 与 memcatched 的区别</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mysql基础"><a href="#mysql基础" class="header-anchor">#</a> MySQL基础</h1> <ol><li><p>数据库中的事务了解吗？事务的四大特性？</p> <ul><li>技术点：事务</li> <li>参考回答：
+<ul><li>事务是并发控制的单位，是用户定义的一个操作序列。它指这些操作要么都做，要么都不做，以便服务器保持数据的完整性。</li> <li>事务通常是以BEGIN TRANSACTION开始，以COMMIT或ROLLBACK结束。</li> <li>事务的四大特性（ACID特性）：原子性（Atomicity）表示事务中包括的诸操作要么全做，要么全不做；一致性（Consistency）表示事务执行的结果必须是使数据库从一个一致性状态变到另一个一致性状态；隔离性（Isolation）表示一个事务的执行不能被其他事务干扰；持续性（Durability）表示一个事务一旦提交，它对数据库中数据的改变就应该是永久性的</li></ul></li> <li>引申：谈谈<a href="https://www.jianshu.com/p/478c6dca1b74" target="_blank" rel="noopener noreferrer">数据库事务的并发控制<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li> <li><p>如何理解数据库的范式？</p> <ul><li>技术点：范式</li> <li>思路：详见实例讲解<a href="https://blog.csdn.net/qq_33862644/article/details/79692652" target="_blank" rel="noopener noreferrer">数据库的3大范式和5大约束<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li>参考回答：
+<ul><li>第一范式（1NF）：数据表中的每个字段必须是不可拆分的最小单元，即确保每一列的原子性</li> <li>第二范式（2NF）：满足1NF后，要求表中的所有列，都必须依赖于主键，而不能有任何一列与主键没有关系</li> <li>第三范式（3NF）：必须先满足第二范式，要求表中的每一列只与主键直接相关而不是间接相关，即表中的每一列只能依赖于主键</li></ul></li></ul></li></ol> <h1 id="mysql存储引擎"><a href="#mysql存储引擎" class="header-anchor">#</a> MYSQL存储引擎</h1> <p>1.InnoDB存储引擎</p> <p>a.支持事务</p> <p>b.支持行级锁，在处理多重并发更新时具备较高的效率</p> <p>c.自动灾难恢复，利用事务日志能快速从灾难中恢复</p> <p>d.可以进行外键约束，支持 Auto_Increment 属性</p> <p>2.MyISAM存储引擎</p> <p>a.不支持事务，支持全文索引</p> <p>b.具备高效的查询和插入效率，但是并发更新效率低，使用全表锁。适合管理邮件或日志数据</p> <p>3.MEMORY</p> <p>a.存储于内存，响应速度快，但守护进程崩溃时数据会全部丢失</p> <p>b.不支持长度可变的格式，如 bolb text 等类型</p> <p>c.适用于存放临时数据且数据量较少，丢失不影响服务的情况。</p> <p>4.MERGE</p> <p>a.MERGE是一组MyISAM表的组合，主要用于聚合几个相同的 MyISAM表的数据用于查询、更新等。</p> <p>5.ARCHIVE</p> <p>a.用于归档的，只支持插入和查询两种基本功能。5.5以后开始支持索引。</p> <p>b.具备很好的压缩机制 使用ZLIB压缩库，常用来做仓库使用。</p> <h2 id="mysql主从复制"><a href="#mysql主从复制" class="header-anchor">#</a> MYSQL主从复制</h2> <p>MYSQL的主从复制是基于binlog的。</p> <p>1.SLAVE 上启动一个IO线程 根据已经在MASTER上授权的用户去请求MASTER上 binlog日志的更新内容</p> <p>2.MASTER根据 SLAVE的复制请求，读取指定 binlog日志文件定位后的内容及下一个指定更新的位置返回给SLAVE。</p> <p>3.SLAVE将收到的信息存储到 RELAY_LOG中，将最新的BINLOG日志位置信息更新到MASTER_INFO中</p> <p>4.SLAVE中的SQL线程实时检测本地RELAY_LOG中的新增日志，解析执行并更新RELAY_INFO中的下一个指定更新位置。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="prev router-link-active">
+        数据库
+      </a></span> <span class="next"><a href="/数据库/Redis面试题.html">
+        redis 与 memcatched 的区别
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.60168104.js" defer></script><script src="/assets/js/2.9ef5e12b.js" defer></script><script src="/assets/js/26.fe7b47f6.js" defer></script>
+  </body>
+</html>
