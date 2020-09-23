@@ -2,6 +2,7 @@
 module.exports = {
     title: 'InterviewNotes', 
     description : '面试笔记',
+    base : '/interviewnotes/',
     themeConfig: {
     //   logo: '/assets/img/logo.png',
       nav: [
