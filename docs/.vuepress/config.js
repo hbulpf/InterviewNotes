@@ -19,7 +19,7 @@ module.exports = {
             text: '其它',
             ariaLabel: 'others',
             items: [
-              { text: 'Android', link: '/Android' },
+              { text: 'Android', link: '/Android/' },
               { text: 'hadoop', link: '/hadoop/' },
               { text: '面经', link: '/面经/' },
               { text: '运维开发', link: '/运维开发/' }
