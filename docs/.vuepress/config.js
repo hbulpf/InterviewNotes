@@ -3,7 +3,11 @@ module.exports = {
     title: 'InterviewNotes', 
     description : '面试笔记',
     base : '/interviewnotes/',
+    markdown: {
+      lineNumbers: true
+    },
     themeConfig: {
+      sidebarDepth: 3,
     //   logo: '/assets/img/logo.png',
       nav: [
         { text: 'Java', link: '/Java/' },
