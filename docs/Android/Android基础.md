@@ -1,4 +1,6 @@
-# [Activity](https://www.jianshu.com/p/602b1ec4ca7a)
+
+# Android基础
+## [Activity](https://www.jianshu.com/p/602b1ec4ca7a)
 
 1. 说下Activity的生命周期？
    技术点：Activity生命周期
@@ -72,8 +74,8 @@
     思路：可大致介绍Activity启动过程涉及到的类，尤其是ActivityManagerServie、ApplicationThread从中发挥的作用。详见[要点提炼|开发艺术之四大组件](https://www.jianshu.com/p/37f366064b98)
     参考回答：调用startActivity()后经过重重方法会转移到ActivityManagerService的startActivity()，并通过一个IPC回到ActivityThread的内部类ApplicationThread中，并调用其scheduleLaunchActivity()将启动Activity的消息发送并交由Handler H处理。Handler H对消息的处理会调用handleLaunchActivity()->performLaunchActivity()得以完成Activity对象的创建和启动。
     引申：由于ActivityManagerService是一个Binder对象，可引申谈谈Binder机制
-    [# Fragment](https://www.jianshu.com/p/184f0c8857d6)
-14. 谈一谈Fragment的生命周期？
+## [Fragment](https://www.jianshu.com/p/184f0c8857d6)
+1. 谈一谈Fragment的生命周期？
     技术点：Fragment生命周期
     思路：分条解释Fragment从创建到销毁整个生命周期中涉及到的方法及作用
     参考回答：Fragment从创建到销毁整个生命周期中涉及到的方法依次为：onAttach()->onCreate()-> onCreateView()->onActivityCreated()->onStart()->onResume()->onPause()->onStop()->onDestroyView()->onDestroy()->onDetach()，其中和Activity有不少名称相同作用相似的方法，而不同的方法有:
@@ -82,26 +84,26 @@
     onActivityCreated()：当与Fragment相关联的Activity完成onCreate()之后调用
     onDestroyView()：在Fragment中的布局被移除时调用
     onDetach()：当Fragment和Activity解除关联时调用
-15. Activity和Fragment的异同？
+2. Activity和Fragment的异同？
     技术点：Fragment作用
     思路：分别解释“异”“同”
     参考回答：
     Activity和Fragment的相似点在于，它们都可包含布局、可有自己的生命周期，Fragment可看似迷你活动。
     不同点是，由于Fragment是依附在Activity上的，多了些和宿主Activity相关的生命周期方法，如onAttach()、onActivityCreated()、onDetach()；另外，Fragment的生命周期方法是由宿主Activity而不是操作系统调用的，Activity中生命周期方法都是protected，而Fragment都是public，也能印证了这一点，因为Activity需要调用Fragment那些方法并管理它。
     引申：可具体谈谈Activity和Fragment的关系
-16. Activity和Fragment的关系？
+3. Activity和Fragment的关系？
     技术点：Fragment作用
     思路：可从Fragment出现的目的、两者数量关系、调用关系展开
     参考回答：
     正如Fragment的名字“碎片”，它的出现是为了解决Android碎片化 ，它可作为Activity界面的组成部分，可在Activity运行中实现动态地加入、移除和交换。
     一个Activity中可同时出现多个Fragment，一个Fragment也可在多个Activity中使用。
     另外，Activity的FragmentManager负责调用队列中Fragment的生命周期方法，只要Fragment的状态与Activity的状态保持了同步，宿主Activity的FragmentManager便会继续调用其他生命周期方法以继续保持Fragment与Activity的状态一致。
-17. 何时会考虑使用Fragment?
+4. 何时会考虑使用Fragment?
     技术点：Fragment作用
     思路：列举更适合使用Fragment的情况
     参考回答：非常经典的例子，即用两个Fragment封装两个界面模块，这样只使一套代码就能适配两种设备，达到两种界面效果；单一场景切换时使用Fragment更轻量化，如ViewPager和Fragment搭配使用
 
-# [Service](https://www.jianshu.com/p/1959eb5c99f5)
+## [Service](https://www.jianshu.com/p/1959eb5c99f5)
 
 1. 谈一谈Service的生命周期？
    技术点：Service生命周期
@@ -158,7 +160,7 @@
    提升Service优先级，比如设置为一个前台服务
    在Activity的onDestroy()通过发送广播，并在广播接收器的onReceive()中启动Service
 
-# [Broadcast Receiver](https://www.jianshu.com/p/82ecfc95924f)
+## [Broadcast Receiver](https://www.jianshu.com/p/82ecfc95924f)
 
 1. 广播有几种形式？什么特点？
    技术点：Broadcast类型
@@ -172,14 +174,15 @@
    技术点：Broadcast使用
    参考回答：广播的注册有两种方法：一种在活动里通过代码动态注册，另一种在配置文件里静态注册。两种方式的相同点是都完成了对接收器以及它能接收的广播值这两个值的定义；不同点是动态注册的接收器必须要在程序启动之后才能接收到广播，而静态注册的接收器即便程序未启动也能接收到广播，比如想接收到手机开机完成后系统发出的广播就只能用静态注册了。
 
-# [ContentProvider](https://www.jianshu.com/p/9048b47bb267)
+## [ContentProvider](https://www.jianshu.com/p/9048b47bb267)
 
 1. ContentProvider了解多少？
    技术点：ContentProvider
    思路：ContentProvider功能
    参考回答：作为四大组件之一，ContentProvider主要负责存储和共享数据。与文件存储、SharedPreferences存储、SQLite数据库存储这几种数据存储方法不同的是，后者保存下的数据只能被该应用程序使用，而前者可以让不同应用程序之间进行数据共享，它还可以选择只对哪一部分数据进行共享，从而保证程序中的隐私数据不会有泄漏风险。
    引申：谈谈ContentProvider底层使用Binder机制原理
-   [#  数据存储](https://www.jianshu.com/p/8d6acf45e9b7)
+
+## [数据存储](https://www.jianshu.com/p/8d6acf45e9b7)
 2. Android中提供哪些数据持久存储的方法？
    技术点：数据持久化
    思路：分条解释每种数据持久存储的特点
@@ -216,15 +219,16 @@
    耗时操作异步化：数据库的操作属于本地IO，通常比较耗时，建议将这些耗时操作放入异步线程中处理
    ContentValues的容量调整：ContentValues内部采用HashMap来存储Key-Value数据，ContentValues初始容量为8，扩容时翻倍。因此建议对ContentValues填入的内容进行估量，设置合理的初始化容量，减少不必要的内部扩容操作
    使用索引加快检索速度：对于查询操作量级较大、业务对要求查询要求较高的推荐使用索引
-   [IPC](https://www.jianshu.com/p/1c70d7306808)
-9. Android中进程和线程的关系？
+
+## [IPC](https://www.jianshu.com/p/1c70d7306808)
+1. Android中进程和线程的关系？
    技术点：进程、线程
    参考回答：
    形象理解：如果把安卓系统比喻成一片土壤，可以把App看做扎根在这片土壤上的工厂，每个APP一般对应一个进程，那么线程就像是工厂的生产线。其中，主线程好比是主生产线，只有一条，子线程就像是副生产线，可以有很多条。
    关系：一个APP一般对应一个进程和有限个线程
    一般对应一个进程，当然，可以在AndroidMenifest中给四大组件指定属性android:process开启多进程模式
    有限个线程：线程是一种受限的系统资源，不可无限制的产生且线程的创建和销毁都有一定的开销。
-10. 为何需要进行IPC？多进程通信可能会出现什么问题？
+2.  为何需要进行IPC？多进程通信可能会出现什么问题？
     技术点：多进程通信
     思路：讨论多进程通信会出现的问题得出IPC的必要性
     参考回答：
@@ -235,7 +239,7 @@
     Application多次创建： Android系统会为新的进程分配独立虚拟机，相当于系统又把这个应用重新启动了一次。
     （2）需要进程间通信的必要性：所有运行在不同进程的四大组件，只要它们之间需要通过内存在共享数据，都会共享失败。这是由于Android为每个应用分配了独立的虚拟机，不同的虚拟机在内存分配上有不同的地址空间，这会导致在不同的虚拟机中访问同一个类的对象会产生多份副本。
     引申： 谈谈IPC的使用场景
-11. 什么是序列化？Serializable接口和Parcelable接口的区别？为何推荐使用后者？
+3.  什么是序列化？Serializable接口和Parcelable接口的区别？为何推荐使用后者？
     技术点：序列化
     参考回答：序列化表示将一个对象转换成可存储或可传输的状态。序列化后的对象可以在网络上进行传输，也可以存储到本地。
     应用场景：需要通过Intent和Binder等传输类对象就必须完成对象的序列化过程。
@@ -314,7 +318,7 @@ Binder驱动：
 
 ![img](file:///C:/Users/hudal/Documents/My Knowledge/temp/e525cf84-c22a-48a6-a055-31571b82e6d4/128/index_files/0.3951193305103171.png)
 
-[# View](https://www.jianshu.com/p/06ff0dfeed39)
+## [View](https://www.jianshu.com/p/06ff0dfeed39)
 
 1. MotionEvent是什么？包含几种事件？什么条件下会产生？
    技术点：View触控
@@ -539,7 +543,8 @@ Handler.sendMessage()发送消息时，会通过MessageQueue.enqueueMessage()向
 8. 使用Hanlder的postDealy()后消息队列会发生什么变化？
    技术点：Handler
    参考回答：post delay的Message并不是先等待一定时间再放入到MessageQueue中，而是直接进入并阻塞当前线程，然后将其delay的时间和队头的进行比较，按照触发时间进行排序，如果触发时间更近则放入队头，保证队头的时间最小、队尾的时间最大。此时，如果队头的Message正是被delay的，则将当前线程堵塞一段时间，直到等待足够时间再唤醒执行该Message，否则唤醒后直接执行。
-   [线程](https://www.jianshu.com/p/ab77a2e83c52)
+
+## [线程](https://www.jianshu.com/p/ab77a2e83c52)
 9. Android中还了解哪些方便线程切换的类？
    技术点：线程通信
    参考回答：对Handler进一步的封装的几个类：
@@ -681,7 +686,7 @@ Handler.sendMessage()发送消息时，会通过MessageQueue.enqueueMessage()向
     可能意图：了解候选者对谷歌&安卓的关注度、共同探讨对新技术的看法、学习主动性、平时学习习惯
     思路：谷歌的安卓官方网站（中文版）：https://developer.android.google.cn，了解最新动态
 
-# 参考
+## 参考
 
 1. 2019校招Android面试题解1.0（上篇）. https://www.jianshu.com/p/718aa3c1a70b
 2. 2019校招Android面试题解1.0（中篇） . https://www.jianshu.com/p/2dd855aa1938

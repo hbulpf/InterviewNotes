@@ -1,19 +1,15 @@
----
-title: Hadoop面试题
----
-
 # Hadoop面试题
 
 1、海量日志数据提取出某日访问百度次数最多的IP，怎么做?
 
-![img](imgs/1443911f-82bb-495a-88d8-ff749c95c5bd.jpg)
+![img](./imgs/1443911f-82bb-495a-88d8-ff749c95c5bd.jpg)
 
 2、有一个1G大小的文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词。
 
 
 
 
-![img](imgs/585e8640-6086-4bff-99d7-abded8fcc032.png)
+![img](./imgs/585e8640-6086-4bff-99d7-abded8fcc032.png)
 
 3、更智能&更大的数据中心架构与传统的数据仓库架构有何不同?
 
@@ -21,13 +17,13 @@ title: Hadoop面试题
 
 
 
-![img](imgs/de7ecd48-fccf-42ca-aa7f-4324df810968.jpg)
+![img](./imgs/de7ecd48-fccf-42ca-aa7f-4324df810968.jpg)
 
 
 
 基于 Hadoop 的数据中心架构
 
-![img](imgs/1360237.png)
+![img](./imgs/1360237.png)
 
 4、运行Hadoop集群需要哪些守护进程?
 
@@ -55,9 +51,9 @@ RDBMS用于事务性系统存储和处理数据，而Hadoop可以用来存储大
 
 
 
-![img](imgs/1402950.png)
+![img](./imgs/1402950.png)
 
-![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)![img](imgs/1414013.png)
+![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)![img](./imgs/1414013.png)
 
 
 
@@ -75,7 +71,7 @@ namenonde的作用在Hadoop中非常重要。它是Hadoop的大脑，主要负�
 
 12、判断：Block Size是不可以修改的。(错误)
 
-![img](imgs/1446095.png)
+![img](./imgs/1446095.png)
 
 ![img](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)13、当NameNode关闭时会发生什么?
 
@@ -91,7 +87,7 @@ namenonde的作用在Hadoop中非常重要。它是Hadoop的大脑，主要负�
 
 16、HDFS，replica如何定位?
 
-![img](imgs/1465133.png)
+![img](./imgs/1465133.png)
 
 17、distcp是什么?
 

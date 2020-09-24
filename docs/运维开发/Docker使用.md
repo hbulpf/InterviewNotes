@@ -1,6 +1,7 @@
+# Docker使用
+
 **1、如何批量删除或者停止运行的容器？**
 
- 
 
 ```
 docker kill/rm `docker ps -aq`
