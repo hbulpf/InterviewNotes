@@ -2,7 +2,7 @@
 
 ## 基础知识
 
-![](docs/计算机网络/imgs/HTTP大纲.jpg)
+![](./imgs/HTTP大纲.jpg)
 
 
 
